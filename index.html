@@ -13,12 +13,18 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 	<style type="text/css">
-		.CUERPO{height: 900px;
-		background-color: crimson;
-		}
-		.logo{display: inline-block;
-			float: left;
-		}
+		.CUERPO{height: 900px; background-color: crimson;}
+		.logo{display: inline-block; margin-left: 10px; margin-right: 10px;margin-top:-5px;;}
+		.d-inline-block {display: inline-block !important;}
+		@media (min-width: 576px) {
+  			.flex-sm-row {
+    				-ms-flex-direction: row !important;
+      		  		flex-direction: row !important;
+  					}}
+		.flex-column {
+  					-ms-flex-direction: column !important;
+      				flex-direction: column !important;
+					}
 	</style>
 	
 </head>
@@ -29,10 +35,10 @@
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-			<div>
-			<img src="img/sketch-icon.png" alt="" class="img-responsive logo" height="50px" width="50px">
-			<a class="navbar-brand" href="#">MARCA</a>
-			</div>
+			<div class="flex-colum flex-sm-row text-center visible-xs-block img-responsive"><img src="img/sketch-icon.png" alt="icon" class="" height="40px" width="40px"> </div> 
+			<a class="navbar-brand visible-lg visible-md visible-sm" href="#"><img src="img/sketch-icon.png" alt="icon" class="d-inline-block align-top logo " height="30px" width="30px"> 
+				MARCA
+			</a>
 	      </div>
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="defaultNavbar1">
@@ -41,9 +47,7 @@
 	        <li><a href="#">Link</a></li>
 	        <li><a href="#">Link</a></li>
 			<li><a href="#">Link</a></li>
-          </ul>
-	     
-	      
+          </ul>  
         </div>
 	    <!-- /.navbar-collapse -->
   </div>
